@@ -1,18 +1,32 @@
-# Scraping Marketplace for Claude Code
+# Rigos0's Web Scraping Marketplace for Claude Code
 
-A curated collection of web scraping plugins for Claude Code, powered by industry-leading scraping platforms.
+**An opinionated, community-created marketplace for web scraping with Claude Code.**
+
+> **Disclaimer:** This is an unofficial, community-maintained marketplace created by [@Rigos0](https://github.com/Rigos0). Not affiliated with or endorsed by Apify or Anthropic. Use at your own discretion.
+
+This marketplace provides curated integrations with industry-leading web scraping platforms, specifically optimized for Claude Code workflows.
 
 ## 🚀 Available Plugins
 
 ### Apify Plugin
-Integrate with the Apify platform to access thousands of pre-built web scrapers and automation tools.
+
+An opinionated integration with the Apify platform, designed specifically for Claude Code workflows.
+
+**What makes this opinionated:**
+- Intelligent Actor discovery with curated recommendations
+- Smart input handling with automatic field resolution
+- Dual-mode data retrieval (in-context MCP or file export)
+- Built-in cost tracking and transparency
+- Proactive URL/handle resolution using RAG
 
 **Features:**
-- 🔍 Search 1000+ ready-to-use scrapers
-- 🌐 Scrape any website (Twitter, Instagram, LinkedIn, e-commerce, etc.)
-- 💰 Pay-per-result pricing (as low as $0.20 per 1,000 results)
-- 📊 Direct data download in JSON/CSV formats
+- 🔍 Search 1000+ ready-to-use Apify Actors
+- 🌐 Scrape any website (Twitter/X, Instagram, LinkedIn, e-commerce, etc.)
+- 🔐 OAuth authentication - no API keys to manage
+- 💰 Transparent pay-per-result pricing (free tier available)
+- 📊 Flexible data export (JSON/CSV/Excel/XML)
 - 🤖 No API limits or rate restrictions
+- 🧠 Smart workflow automation with minimal user input
 
 [View Apify Plugin Documentation →](./apify-plugin/README.md)
 
@@ -49,14 +63,37 @@ Integrate with the Apify platform to access thousands of pre-built web scrapers 
 
 Each plugin has its own README with detailed setup instructions and usage examples.
 
+## 💡 Philosophy
+
+This marketplace is **opinionated** by design:
+
+- **Claude Code First**: Workflows optimized specifically for Claude Code's capabilities
+- **Smart Defaults**: Intelligent parameter resolution to minimize user friction
+- **Cost Transparency**: Always show what you're paying for
+- **Curated Quality**: Recommended tools are tested and proven
+- **Progressive Complexity**: Simple tasks are simple, complex tasks are possible
+
 ## 🤝 Contributing
 
-Found a bug or have a feature request? Open an issue on GitHub!
+This is a community-maintained marketplace. Contributions are welcome!
+
+- Found a bug? [Open an issue](https://github.com/Rigos0/scraping-marketplace/issues)
+- Have a feature request? [Start a discussion](https://github.com/Rigos0/scraping-marketplace/discussions)
+- Want to contribute? Fork and submit a PR
+
+## ⚠️ Important Notes
+
+- **Not Official**: This marketplace is not affiliated with or endorsed by Apify or Anthropic
+- **Community Maintained**: Created and maintained by [@Rigos0](https://github.com/Rigos0)
+- **OAuth Authentication**: Uses secure OAuth flow - no API keys to manage!
+- **Free Tier Available**: Apify offers a free tier to get started
+- **Use Responsibly**: Always respect website Terms of Service and robots.txt
+- **Costs Apply**: Apify Actors consume compute units - check pricing before running
 
 ## 📄 License
 
-MIT
+This marketplace configuration and documentation are provided as-is. Individual plugins may have their own licenses.
 
 ---
 
-**Built by [@Rigos0](https://github.com/Rigos0)**
+**Created by [@Rigos0](https://github.com/Rigos0)** | [GitHub](https://github.com/Rigos0/scraping-marketplace)

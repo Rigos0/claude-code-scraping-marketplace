@@ -1,14 +1,17 @@
 {
   "name": "apify-plugin",
-  "description": "Apify web scraping and automation platform integration",
+  "displayName": "Apify Scraping Plugin (by Rigos0)",
+  "description": "Opinionated Apify integration for Claude Code - intelligent web scraping with smart Actor discovery, automatic input handling, and flexible data retrieval",
   "version": "1.0.0",
   "author": {
-    "name": "Rigos0"
+    "name": "Rigos0",
+    "url": "https://github.com/Rigos0"
   },
+  "disclaimer": "Unofficial community plugin. Not affiliated with Apify. Requires Apify account (free tier available). Uses OAuth - no API keys needed!",
   "mcpServers": {
     "apify": {
       "type": "http",
-      "url": "https://mcp.apify.com/?tools=actors,docs,experimental,get-actor-run,get-actor-run-list,get-dataset-items,get-dataset-schema,apify/rag-web-browser"
+      "url": "https://mcp.apify.com/?tools=actors,docs,get-actor-run,get-actor-run-list,apify/rag-web-browser"
     }
   }
 }

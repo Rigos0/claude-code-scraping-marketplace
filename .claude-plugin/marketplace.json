@@ -1,13 +1,20 @@
 {
-  "name": "scraping",
+  "name": "scraping-marketplace",
+  "displayName": "Rigos0's Web Scraping Marketplace",
+  "description": "An opinionated, community-created marketplace for web scraping with Claude Code. Features curated integrations with leading scraping platforms.",
   "owner": {
-    "name": "Rigos0"
+    "name": "Rigos0",
+    "url": "https://github.com/Rigos0"
   },
+  "repository": "https://github.com/Rigos0/scraping-marketplace",
+  "disclaimer": "This is an unofficial, community-maintained marketplace. Not affiliated with or endorsed by Apify or Anthropic. Use at your own discretion.",
+  "version": "1.0.0",
   "plugins": [
     {
       "name": "apify-plugin",
       "source": "./apify-plugin",
-      "description": "Apify web scraping and automation platform - scrape websites, extract data, and automate web workflows"
+      "description": "Opinionated Apify integration for Claude Code - intelligent web scraping with automatic Actor discovery, smart input handling, and flexible data retrieval",
+      "tags": ["scraping", "automation", "data-extraction", "apify", "web-scraping"]
     }
   ]
 }
