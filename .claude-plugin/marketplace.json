@@ -1,13 +1,11 @@
 {
   "name": "scraping-marketplace",
-  "displayName": "Rigos0's Web Scraping Marketplace",
   "description": "An opinionated, community-created marketplace for web scraping with Claude Code. Features curated integrations with leading scraping platforms.",
   "owner": {
     "name": "Rigos0",
     "url": "https://github.com/Rigos0"
   },
   "repository": "https://github.com/Rigos0/scraping-marketplace",
-  "disclaimer": "This is an unofficial, community-maintained marketplace. Not affiliated with or endorsed by Apify or Anthropic. Use at your own discretion.",
   "version": "1.0.0",
   "plugins": [
     {
