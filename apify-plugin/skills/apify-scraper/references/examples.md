@@ -150,8 +150,8 @@ Complete examples demonstrating the Apify scraper skill workflow.
 **Workflow:**
 1. Recognize ambiguous parameter: "nasa page from linkedin" (no specific URL)
 2. **Proactively use RAG:** "I'll use RAG Web Browser to find NASA's LinkedIn URL first."
-3. Use RAG Web Browser: Search for "NASA official LinkedIn company page"
-4. Extract URL from results: `https://www.linkedin.com/company/nasa/`
+3. **Call MCP tool:** `apify-slash-rag-web-browser` with query "NASA official LinkedIn company page"
+4. Extract URL from markdown results: `https://www.linkedin.com/company/nasa/`
 5. Find LinkedIn scraper: `voyager/linkedin-profile-scraper`
 6. Configure input: `{"profileUrls": ["https://www.linkedin.com/company/nasa/"], "maxResults": 50}`
 7. Ask mode → User chooses "Save to file"
@@ -159,7 +159,7 @@ Complete examples demonstrating the Apify scraper skill workflow.
 9. Execute and download data
 10. Report: **"✅ Scraped 50 posts in 1m 30s. Cost: $0.05"**
 
-**Note:** Agent doesn't ask permission first - it proactively uses RAG because user likely doesn't know the exact URL.
+**Note:** Agent uses the MCP tool `apify-slash-rag-web-browser` directly, not the generic `call-actor` flow.
 
 ---
 
@@ -169,15 +169,15 @@ Complete examples demonstrating the Apify scraper skill workflow.
 
 **Workflow:**
 1. Recognize uncertainty: User didn't provide Instagram handle
-2. **Ask first:** "Do you know Elon Musk's Instagram username?"
-3. User responds: "No, can you find it?"
-4. **Use RAG Web Browser:** "I'll use RAG Web Browser to find his Instagram account."
-5. Search: "Elon Musk official Instagram account"
-6. Extract username from results: `@elonmusk`
-7. Find Instagram scraper: `apify/instagram-scraper`
-8. Configure: `{"usernames": ["elonmusk"], "resultsLimit": 50}`
-9. Continue with mode selection and execution...
-10. Report: **"✅ Scraped 50 posts in 42s. Cost: $0.025"**
+2. **Proactively use RAG:** "I'll use RAG Web Browser to find Elon Musk's Instagram account."
+3. **Call MCP tool:** `apify-slash-rag-web-browser` with query "Elon Musk official Instagram account"
+4. Extract username from markdown results: `@elonmusk`
+5. Find Instagram scraper: `apify/instagram-scraper`
+6. Configure: `{"usernames": ["elonmusk"], "resultsLimit": 50}`
+7. Continue with mode selection and execution...
+8. Report: **"✅ Scraped 50 posts in 42s. Cost: $0.025"**
+
+**Note:** Agent proactively uses RAG without asking first, since user likely doesn't know the exact handle.
 
 ---
 

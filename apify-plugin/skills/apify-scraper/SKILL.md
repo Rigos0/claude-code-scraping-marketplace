@@ -59,21 +59,32 @@ Use `call-actor` with `step="info"` to get:
 
 **For URLs, account handles, or usernames:**
 - User often won't know exact URLs or handles
-- **Proactively suggest using RAG Web Browser** to find them
+- **Proactively use RAG Web Browser** to find them
 - Don't ask user for information they likely don't have
 
-**Use RAG Web Browser (`apify/rag-web-browser`) to find:**
+**RAG Web Browser Tool:**
+- **MCP Tool Name:** `apify-slash-rag-web-browser` (use this directly from MCP)
+- **Actor Name:** `apify/rag-web-browser`
+- **IMPORTANT:** Use the MCP tool `apify-slash-rag-web-browser`, not the generic `call-actor` flow
+
+**Use RAG Web Browser to find:**
 - Account URLs (e.g., "NASA's LinkedIn page", "SpaceX Twitter account")
 - Profile links (e.g., "Elon Musk's Instagram handle")
 - Company pages (e.g., "OpenAI's company page")
 - Specific usernames when user only provides a name
 
+**How to use RAG Web Browser:**
+1. Call the MCP tool: `apify-slash-rag-web-browser`
+2. Provide search query (e.g., "NASA official LinkedIn company page")
+3. Extract URL or username from markdown results
+4. Use extracted info with the appropriate scraper
+
 **Example RAG resolution:**
 ```
 User: "I wanna scrape nasa page from linkedin"
 → Agent: "I'll use RAG Web Browser to find NASA's LinkedIn URL first."
-→ Use RAG to search: "NASA official LinkedIn company page"
-→ Extract URL from results
+→ Call apify-slash-rag-web-browser with query: "NASA official LinkedIn company page"
+→ Extract URL from results: https://www.linkedin.com/company/nasa/
 → Use URL with LinkedIn scraper
 ```
 
