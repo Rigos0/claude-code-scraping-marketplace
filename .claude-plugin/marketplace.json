@@ -1,0 +1,13 @@
+{
+  "name": "scraping",
+  "owner": {
+    "name": "Rigos0"
+  },
+  "plugins": [
+    {
+      "name": "apify-plugin",
+      "source": "./apify-plugin",
+      "description": "Apify web scraping and automation platform - scrape websites, extract data, and automate web workflows"
+    }
+  ]
+}

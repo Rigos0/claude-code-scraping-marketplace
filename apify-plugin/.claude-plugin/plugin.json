@@ -1,0 +1,14 @@
+{
+  "name": "apify-plugin",
+  "description": "Apify web scraping and automation platform integration",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rigos0"
+  },
+  "mcpServers": {
+    "apify": {
+      "type": "http",
+      "url": "https://mcp.apify.com/?tools=actors,docs,experimental,get-actor-run,get-actor-run-list,get-dataset-items,get-dataset-schema"
+    }
+  }
+}
