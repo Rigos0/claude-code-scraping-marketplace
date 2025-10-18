@@ -32,7 +32,7 @@ This marketplace provides curated integrations with web scraping platforms, spec
 
 ### Apify Plugin
 
-An opinionated integration with the Apify platform that handles web scraping intelligently.
+An opinionated integration with the Apify platform that handles web scraping intelligently. Built on [Apify's MCP server](https://mcp.apify.com/) - learn more in the [official MCP integration docs](https://docs.apify.com/platform/integrations/mcp).
 
 **What makes this opinionated:**
 - Intelligent Actor discovery with curated recommendations
@@ -69,27 +69,13 @@ This marketplace is opinionated by design:
 - Curated Quality: Recommended tools are tested and proven
 - Progressive Complexity: Simple tasks are simple, complex tasks are possible
 
-## Contributing
-
-This is a community-maintained marketplace. Contributions are welcome!
-
-- Found a bug? [Open an issue](https://github.com/Rigos0/scraping-marketplace/issues)
-- Have a feature request? [Start a discussion](https://github.com/Rigos0/scraping-marketplace/discussions)
-- Want to contribute? Fork and submit a PR
-
 ## Important Notes
 
-- Not Official: This marketplace is not affiliated with or endorsed by Apify or Anthropic
-- Community Maintained: Created and maintained by [@Rigos0](https://github.com/Rigos0)
 - OAuth Authentication: Uses secure OAuth flow - no API keys to manage
 - Free Tier Available: Apify offers a free tier to get started
 - Use Responsibly: Always respect website Terms of Service and robots.txt
 - Costs Apply: Apify Actors consume compute units - check pricing before running
 
-## License
-
-This marketplace configuration and documentation are provided as-is. Individual plugins may have their own licenses.
-
 ---
 
-**Created by [@Rigos0](https://github.com/Rigos0)** | [GitHub](https://github.com/Rigos0/scraping-marketplace)
+Community marketplace by [@Rigos0](https://github.com/Rigos0)
