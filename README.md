@@ -1,6 +1,6 @@
-# Rigos0's Web Scraping Marketplace for Claude Code
+# Web Scraping Marketplace for Claude Code
 
-An opinionated, community-created marketplace for web scraping with Claude Code.
+An opinionated marketplace for web scraping with Claude Code.
 
 ## Installation
 
