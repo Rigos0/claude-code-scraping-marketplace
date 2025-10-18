@@ -54,17 +54,42 @@ Use `call-actor` with `step="info"` to get:
 - **Pricing information** (needed for cost reporting)
 
 ### 4. Configure Input
+
+**Parameter Resolution Strategy:**
+
+**For URLs, account handles, or usernames:**
+- User often won't know exact URLs or handles
+- **Proactively suggest using RAG Web Browser** to find them
+- Don't ask user for information they likely don't have
+
+**Use RAG Web Browser (`apify/rag-web-browser`) to find:**
+- Account URLs (e.g., "NASA's LinkedIn page", "SpaceX Twitter account")
+- Profile links (e.g., "Elon Musk's Instagram handle")
+- Company pages (e.g., "OpenAI's company page")
+- Specific usernames when user only provides a name
+
+**Example RAG resolution:**
+```
+User: "I wanna scrape nasa page from linkedin"
+→ Agent: "I'll use RAG Web Browser to find NASA's LinkedIn URL first."
+→ Use RAG to search: "NASA official LinkedIn company page"
+→ Extract URL from results
+→ Use URL with LinkedIn scraper
+```
+
+**For scraping parameters (maxItems, filters, etc.):**
+- Ask user for clarification when ambiguous
+- Use sensible defaults when not specified
+- Only ask about parameters the user would reasonably know
+
 **Auto-fill rules:**
-- Only fill fields that are obvious from context
-- Required fields: Always ask if not obvious
+- URLs/handles: Use RAG to find (don't ask user)
+- `maxItems` / `resultsLimit`: Ask if ambiguous, default to 50
+- Filters: Only fill if explicitly mentioned
+- Required fields: Ask user if not obvious from context
 - Optional fields: Skip unless clearly relevant
 
 See `references/common-scraper-fields.md` for field patterns and defaults.
-
-**Common defaults:**
-- `maxItems` / `resultsLimit`: 50 unless specified
-- `sort`: "Latest" for chronological data
-- Filters: Only fill if explicitly mentioned
 
 ### 5. Choose Retrieval Mode
 Ask user to choose between:

@@ -141,7 +141,47 @@ Complete examples demonstrating the Apify scraper skill workflow.
 
 ---
 
-## Example 8: General Error Recovery
+## Example 8: Parameter Resolution with RAG Web Browser
+
+**User request:** "I wanna scrape nasa page from linkedin"
+
+**Agent response:** "Reading Rigos' Apify scraper skill..."
+
+**Workflow:**
+1. Recognize ambiguous parameter: "nasa page from linkedin" (no specific URL)
+2. **Proactively use RAG:** "I'll use RAG Web Browser to find NASA's LinkedIn URL first."
+3. Use RAG Web Browser: Search for "NASA official LinkedIn company page"
+4. Extract URL from results: `https://www.linkedin.com/company/nasa/`
+5. Find LinkedIn scraper: `voyager/linkedin-profile-scraper`
+6. Configure input: `{"profileUrls": ["https://www.linkedin.com/company/nasa/"], "maxResults": 50}`
+7. Ask mode → User chooses "Save to file"
+8. Ask format → User chooses "json"
+9. Execute and download data
+10. Report: **"✅ Scraped 50 posts in 1m 30s. Cost: $0.05"**
+
+**Note:** Agent doesn't ask permission first - it proactively uses RAG because user likely doesn't know the exact URL.
+
+---
+
+## Example 9: Finding Account Handles with RAG
+
+**User request:** "Get posts from Elon Musk on Instagram"
+
+**Workflow:**
+1. Recognize uncertainty: User didn't provide Instagram handle
+2. **Ask first:** "Do you know Elon Musk's Instagram username?"
+3. User responds: "No, can you find it?"
+4. **Use RAG Web Browser:** "I'll use RAG Web Browser to find his Instagram account."
+5. Search: "Elon Musk official Instagram account"
+6. Extract username from results: `@elonmusk`
+7. Find Instagram scraper: `apify/instagram-scraper`
+8. Configure: `{"usernames": ["elonmusk"], "resultsLimit": 50}`
+9. Continue with mode selection and execution...
+10. Report: **"✅ Scraped 50 posts in 42s. Cost: $0.025"**
+
+---
+
+## Example 10: General Error Recovery
 
 **User request:** "Scrape Amazon products"
 
